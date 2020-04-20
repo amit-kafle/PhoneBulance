@@ -1,0 +1,4 @@
+#Sun Apr 19 21:16:43 NPT 2020
+base.0=D\:\\Amit\\Final-Year-Project-master\\app\\build\\intermediates\\dex\\release\\mergeDexRelease\\out\\classes.dex
+path.0=classes.dex
+renamed.0=classes.dex

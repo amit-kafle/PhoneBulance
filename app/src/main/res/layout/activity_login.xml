@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#fff">
+
+    <ImageView
+        android:id="@+id/medpallogo"
+        android:layout_width="wrap_content"
+        android:layout_height="150dp"
+        android:layout_marginTop="30dp"
+        android:src="@drawable/phonebulance"/>
+
+    <TextView
+        android:id="@+id/txtname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/medpallogo"
+        android:fontFamily="@font/quicksand_bold"
+        android:text="Welcome"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="40dp"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="30dp"
+        android:textStyle="bold" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card"
+        android:layout_below="@+id/txtname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="24dp"
+        app:cardElevation="2dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="15dp"
+        android:fontFamily="@font/quicksand_bold"
+        android:layout_gravity="center">
+        <EditText
+            android:id="@+id/phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:background="#FFF"
+            android:drawableStart="@drawable/ic_phone"
+            android:drawablePadding="4dp"
+            android:hint="Phone Number"
+            android:imeOptions="actionNext"
+            android:minWidth="350dp"
+            android:inputType="number"
+            android:minHeight="60dp"
+            android:singleLine="true" />
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="24dp"
+        app:cardElevation="2dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_below="@+id/card"
+        android:layout_gravity="center">
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:fontFamily="@font/quicksand_bold"
+            app:passwordToggleEnabled="true"
+            app:hintEnabled="false">
+            <EditText
+                android:id="@+id/password"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="#FFF"
+                android:drawableStart="@drawable/ic_password"
+                android:drawablePadding="4dp"
+                android:hint="Password"
+                android:imeOptions="actionDone"
+                android:inputType="textPassword"
+                android:minWidth="350dp"
+                android:minHeight="60dp" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+        </androidx.cardview.widget.CardView>
+    <androidx.appcompat.widget.AppCompatCheckBox
+        android:id="@+id/combo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Keep me Logged In"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/colorPrimaryDark"
+        android:layout_below="@id/cardd"
+        />
+    <Button
+        android:id="@+id/signin"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="Login"
+        android:textSize="16dp"
+        android:layout_below="@+id/combo"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/quicksand_bold"
+        android:layout_centerInParent="true"
+        android:layout_marginRight="15dp"
+        android:layout_marginLeft="15dp"
+        android:background="@color/colorPrimaryDark"
+        android:textColor="@android:color/white"
+        android:textAllCaps="true"
+        android:onClick="userLogin"
+        android:layout_marginBottom="10dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_below="@+id/signin"
+        android:paddingTop="5dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/quicksand"
+            android:textColor="@android:color/black"
+            android:textStyle="bold"
+            android:layout_marginLeft="10dp"
+            android:text="Don't have an account ? "
+            android:textSize="16dp" />
+
+        <TextView
+            android:id="@+id/signupa"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/quicksand"
+            android:onClick="openRegisterActivity"
+            android:textStyle="bold"
+            android:text="Signup"
+            android:textColor="@android:color/holo_red_light"
+            android:textSize="16dp" />
+
+    </LinearLayout>
+
+</RelativeLayout>
